@@ -105,6 +105,7 @@
             this.btnCarregar.TabIndex = 2;
             this.btnCarregar.Text = "Carregar";
             this.btnCarregar.UseVisualStyleBackColor = true;
+            this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click);
             // 
             // lvlVideo
             // 
@@ -133,7 +134,9 @@
             this.ClientSize = new System.Drawing.Size(948, 528);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmPrincipal";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Visualizador de Vídeo no Windows Forms";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
