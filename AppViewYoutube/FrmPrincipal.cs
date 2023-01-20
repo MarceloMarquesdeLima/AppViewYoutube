@@ -47,7 +47,7 @@ namespace AppViewYoutube
             html += "<body><center><iframe id='video' src='https://www.youtube.com/embed/{0}?autoplay={1}' width='{2}' height='{3}' frameborder='0' allowfullscreen='true'></iframe></center>";
             html += "</body></html>";
 
-            wbVideo.DocumentText = string.Format(html, txtUrl.Text.Trim().Split('=')[1],chkAutoPlay.Checked ? "1" : "0",wbVideo.Width - 30, wbVideo.Height - 30);
+            wbVideo.DocumentText = string.Format(html, txtUrl.Text.Trim().Split('=','&')[1], chkAutoPlay.Checked ? "1" : "0",wbVideo.Width - 30, wbVideo.Height - 30);
             txtUrl.Text = string.Empty;
             chkAutoPlay.Checked = false;
         }
